@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <header>Memory Card</header>
+        <header>Memory Card Game</header>
     )
 }
 

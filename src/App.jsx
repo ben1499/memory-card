@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Card from "./components/Card";
 import Scoreboard from './components/Scoreboard';
 
-const gifIds = ["HP7mtfNa1E4CEqNbNL", "FqHvakENy6Oe4", "pkKt4lHJuZj9KjsxoS", "BY8ORoRpnJDXeBNwxg", "HjKG2nRz7NOv6ch12D", "A14XC5WFpDpHjyH9Pz", "BcMJvmwkmbyWpKkBj3", "bC9czlgCMtw4cj8RgH", "xU0yHlYfvJdVrHzVUI", "F3BeiZNq6VbDwyxzxF"]
+const gifIds = ["HP7mtfNa1E4CEqNbNL", "D8xNev92dfqdG9FPx4", "pkKt4lHJuZj9KjsxoS", "BY8ORoRpnJDXeBNwxg", "HjKG2nRz7NOv6ch12D", "A14XC5WFpDpHjyH9Pz", "BcMJvmwkmbyWpKkBj3", "bC9czlgCMtw4cj8RgH", "xU0yHlYfvJdVrHzVUI", "F3BeiZNq6VbDwyxzxF"]
 const params =  {
   api_key: "TKxL5wdyhk6OzBvFMWDJtNt9xCOvpVfw",
   ids: gifIds
@@ -76,11 +76,14 @@ function App() {
   return (
     <>
       <Header />
-      <Scoreboard score={score} highScore={highScore} />
-      {gifs.map((gif) => (
-        <Card key={gif.id} data={gif} onClick={handleClick} />
-      ))}
-      
+      <main>
+        <Scoreboard score={score} highScore={highScore} />
+        <div className='cards-container'>
+        {gifs.map((gif) => (
+          <Card key={gif.id} data={gif} onClick={handleClick} />
+        ))}
+        </div>
+      </main>
     </>
   )
 }
