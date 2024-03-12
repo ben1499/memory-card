@@ -9,7 +9,6 @@ const params =  {
   ids: gifIds
 }
 
-
 function App() {
 
   const [gifs, setGifs] = useState([]);
@@ -54,7 +53,6 @@ function App() {
   }
 
   const handleClick = (selectedGif) => {
-    console.log(selectedGif.isClicked);
     let updatedArray;
     if (selectedGif.isClicked) {
       // Reset all items' isClicked value to false
